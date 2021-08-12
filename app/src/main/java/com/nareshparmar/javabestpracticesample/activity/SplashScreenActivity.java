@@ -1,9 +1,12 @@
-package com.nareshparmar.javabestpracticesample;
+package com.nareshparmar.javabestpracticesample.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.nareshparmar.javabestpracticesample.R;
 
 public class SplashScreenActivity extends AppCompatActivity {
 
@@ -19,7 +22,9 @@ public class SplashScreenActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-
+                Intent intent = new Intent(SplashScreenActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish();
             }
         },20);
     }
